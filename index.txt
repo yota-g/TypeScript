@@ -35,6 +35,8 @@ Node.jsのパッケージ（Package）とは、予め用意された便利な機
 7.package.jsonを作ろう
 typescriptの環境を作る上でパッケージ管理が必要なのだがそれを管理してくれるのが、package.jsonである。
 講義ではbranchを切って切り替えている。
+git push origin HEADを使う
+カレントブランチをリモートの同名ブランチにプッシュするときは、以下コマンドでOKです。わざわざカレントブランチ名を書く必要はありません。便利！
 
 typescriptをコンパイルするnpmパッケージinstallしてパッケージ管理をやるのでpackage .jsonを作成する。
 package.jsonの作成はnpm init コマンドで実施。
@@ -45,9 +47,74 @@ npm init -y
 バージョンをあげようというのも出てくるが今回は置いておく
 
 git status で実行するとpackage.jsonのファイルの存在が確認できる。
-lesコマンドで中身を見ることができる。
+git diffコマンドで中身を見ることができる。
 
 json形式のデータがファイルの内容として見ることができる。
+
+npm install -g npm to updateだけだとadmin権限がないのでエラーになる。
+バージョンアップする際はsudoをつけて、adminできるようにしてダウンロードする。 
+sudo ダウンロードコマンドとすることでパスワードが求められるようになる。
+これでダウンロードできる
+
+8.typescriptをインストールする。
+npmパッケージ
+
+ブラウザでmicrosoft typescript githubで検索することで、GitHubにあるTypeScriptを確認できる。
+これはTypeScriptのコンパイラーのソースコードが公開されている。
+TypeScriptを導入しないと動かない。
+TypeScriptの最新版をダウンロードする。
+最新版の確認方法は、npm info typescript
+情報を返してくれる。実行した時点でのtypescriptが何版なのかがわかる。
+今回は3.7.5のtypescriptを使用する。
+バージョンを合わせておくこと。
+バージョンを合わせる方法。npm --save-dev install typescript@3.7.5
+--save-devこれをつけることでtypescriptは開発環境だけで使用するので
+runタイム中にはいらない　なのでこのようなオプションをつけるようにする。範囲が広がってしまうので。
+オプションをつけたほうが適切。
+ダウンロードすると
+package.jsonが変わったのと,package-lock.jsonができている。
+
+git diffで変わった内容を確認。
+typescriptの情報が追加されている。
+devDependenciesに入っている。
+
+typescriptをjsにコンパイルできるツールが手に入ったので確認していく。
+typescriptのソースコードを管理できるディレクトリを作成する。
+mkdir ディレクトリ
+touch ディレクトリ/ファイル名.ts
+typescriptのコードが入っているものの拡張子は.tsになる。
+
+エディタでファイル名.tsを開く。
+コードを入力していく。
+データの型を入れて記載。ぐらいで現状はOK
+typescriptの記法で書いている
+このままだと実行できない。jsに変換する必要がある。
+
+変換を行う方法。
+tscとターミナルに入力することでコンパイルができる。
+
+tsc ファイル名を入力
+command not foundというようになる。
+tscはこのプロジェクト配下にのみ有効なものだから
+package.jsonの配下のディレクトリのみにしか使えない。
+どこにtscのあるのか。
+ls ./node_modules/.bin/tscがある。
+これを指定して実行する。
+./node_modules/.bin/tsc　ディレクトリ名/ファイル名.tsで実行する。　コマンドが長い。
+うまい方法はないのか。npxコマンドがある。
+プロジェクトに特化した特殊な実行ファイルnode.module配下を探して実行してくれる。
+npx tsc ディレクトリ/ファイル名.tsを指定することでコンパイルしてくれる。
+ jsができているか確認することでコンパイルできていることが確認できる。
+ 
+
+ディレクトリ/ファイルの部分に.jsのファイルが作成される。
+cat ディレクトリ/ファイル名.jsで中身を覗ける
+コンパイルされたjsのファイルが作成されているという風になる。
+
+node ディレクトリ/ファイル.jsを実行するときちんと表示される。
+動作確認ができる。
+
+
 
 
 
