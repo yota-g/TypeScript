@@ -1,0 +1,54 @@
+
+
+
+5.Node.js
+TypeScriptは素のままでは使うことができない。
+それをコンパイルしてjsに変換する必要がある。
+その専用のコンパイラーライブラリーが必要
+それにNode.jsの環境が必要。
+
+TypeScriptから変換されたjsを実行するためにも使用する。
+react.angureでもnode.jsを使用
+
+推奨版をダウンロード 
+LTS Long Term Supportと言って長期間サポートがついている。
+動作保証をしてくれる。
+最新版でないとできないということはないのでLTSでいける。
+
+node というコマンドを使用できる。
+node -v nodeのバージョンを確認できる。
+npm -vもダウンロードしてないとnot foundになる。
+ダウンロードするとバージョンが表示される。
+which nodeで場所が表示される。
+
+other downloadにprevious releasesに過去のバージョンがあるのでダウンロードできる。
+このバージョンを使いたいというのがある時に使用する。
+npmの正式名称は、Node Package Managerです。
+npmの正式名称からも解るように、Node.jsのパッケージ（Package ）を管理する（Manager）ツールです。
+Node.jsのパッケージ（Package）とは、予め用意された便利な機能をまとめたものです。
+
+6.GitHubでリポジトリを作成しよう
+
+ .gitignoreはgitの管理にしたくないようことディレクトリの一覧が記載されている物。
+を選択することで、node.jsで予め必要な物を用意してくれている
+
+7.package.jsonを作ろう
+typescriptの環境を作る上でパッケージ管理が必要なのだがそれを管理してくれるのが、package.jsonである。
+講義ではbranchを切って切り替えている。
+
+typescriptをコンパイルするnpmパッケージinstallしてパッケージ管理をやるのでpackage .jsonを作成する。
+package.jsonの作成はnpm init コマンドで実施。
+初期化処理をして、package.jsonが生成される。
+json形式で出力される。デフォルトのままで問題ない。その際は-yをつけること。
+npm init -y
+標準出力として、バージョンが表示される。
+バージョンをあげようというのも出てくるが今回は置いておく
+
+git status で実行するとpackage.jsonのファイルの存在が確認できる。
+lesコマンドで中身を見ることができる。
+
+json形式のデータがファイルの内容として見ることができる。
+
+
+
+
