@@ -145,9 +145,63 @@ ts-nodeをダウンロードすると前回のコマンドをいちいちしな�
 ts-nodeめちゃめちゃ便利
 npx ts-node　ディレクトリ名/ファイル名.tsでコンパイルから表示ができるようになる。
 
+commit してリモートにgit push -u origin HEADでpushして、git merge -でマスターにマージをしてからpushする。
+コンパイルと実行を一気にする方法。
+面倒なことがあって、コードを変更するためにts-codeを毎回変換しないといけないのがめんどくさい
+大きい物なら余計に。膨大なコストになってしまうので、面倒なことをやらなくて済むようにしていく。
 
 
 
+10.ts-node-devをインストールしよう
+タイプスクリプトのコンパイルから実行までをより高速に実施する方法を確認する方法
+ts-node-dev githubで検索
+Compiles your TS app and restarts when files are modified.のな機能がつく
+ファイルが変更される度にコンパイルして実行されるという機能
 
+branchを切って実行していく
+npm info ts-node-dev
+ts-node-dev@1.0.0-pre.44今回はこれを使用
+npm install --save-dev ts-node-dev@1.0.0-pre.44でインストール
+git diff package,jsonで想定したバージョンか確認することができるとOK
 
+ts-node-dev githubで使用方法を確認。
+README.mdというファイルのUsageをみていく。
+ts-node-dev --respawn --transpileOnly server.ts
+tsファイルを引数に渡して、毎回ファイルの変更を検知して、コンパイルと実行を行うためには
+コンパイルと実行をする場合は--respawn が必要になる。　コンパイルだけやりたい場合は--transpileOnlyをつけるといい
+ts-node-devは--save-devでダウンロードしているのでグローバル空間にはないのでnpxが必要。
+npx ts-node-dev -respawn ディレクトリ/ファイル名.ts を行うとコンパルをして実行までしてくれる。
+vashのプロンプトが返ってこない。ずっと監視されている状態。
+ファイルが変更されたら出力される状態。
+ctrol cで終了できる
 
+エディタでタイプスクリプトのファイルを開きながら、
+vim ディレクトリ/ ファイル.tsで開いて、
+:terminarlでターミナルを開いて、
+npx ts-node-dev -respawn src/install-type.tsを実行させると
+監視中にできる。監視対象はソースの下にあるファイル
+CTRL-W w	カーソルを次のウィンドウに移動する
+CTRL-W h	カーソルを左のウィンドウに移動する
+CTRL-W j	カーソルを下のウィンドウに移動する
+CTRL-W k	カーソルを上のウィンドウに移動する
+CTRL-W l	カーソルを右のウィンドウに移動する
+を利用して移動をして作業する。
+
+編集が終わったら:wでsaveすると監視されていたファイルが修正されたよとわかったので
+瞬時にコンパイルされて表示される。変更後の文字列が表示されている。自動で検知してくれるので作業が捗る。
+:q!は保存せずに終了
+高速にコンパイルして実行することができまた何度もできる。
+overheadがなく瞬時に手に入れることができる。
+これを使用して、講義を行なっていく。
+typescriptの タスクに入れておくとベストプラクティスなので実行する。
+scriptsにタスクを登録することができるので登録していく。
+"dev": "ts-node-dev --respawn", を追加する。
+ devはカスタムなもの。なんでもいい。短いとミスが起きないので省略形に　
+動作確認を実施。
+npm runでタスクはrunできる
+npm run dev ディレクトリ名/ ファイル名.tsを実行すると
+監視中なのでプロンプトは戻ってこない。
+
+git diff -cachedでaddした変更点を見ることができる。
+
+　
