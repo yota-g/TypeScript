@@ -37,7 +37,7 @@ try {
 //今回の様に呼び元に戻ってこない様な関数の戻り値に対応するアノテーションやneverと書く。文法上のお約束。
 //voidとneverの違い。voidがreturnされる値が、ないことを意味する。呼び元には必ず返ってくる。neverは戻ってこないことを意味するので値も何もない。
 let foo: void = undefined;
-let bar: never = undefined;
+//let bar: never = undefined;
 //voidにはundefinedは含まれるので代入できる。neverは値という概念がないのでundefinedを入れるとエラーになる。nullでも同じ。
 //neverには値を代入できない。 
 //唯一error('only me!');とerrorだけは代入できる。 error関数はnever型を返す関数なので、never型の変数に代入できる。

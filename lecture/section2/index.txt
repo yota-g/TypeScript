@@ -129,4 +129,20 @@ echo 'export {};' > src/type-safety;
 echo 'export {}'  > src/unknown.ts
 でファイルを作成して実行していく
 
+26.交差型(intersection型)
+既存の方を生かしつつ新たな方を合理的に作成する方法。
+ファイルを作って作業をしていく。
+echo 'export {}'  > src/intersection.tsで作成をする。
+
+27.共用体型(union型)
+union型はどうやったら使用できるのか。
+機能がもたらすメリットを理解する。
+ファイルを新規作成してやっていく。
+
+28.Literal型
+今まで紹介したprimitive型よりも
+さらに細かい指定ができる。
+string,number,booleanのliteral型があるので学んでいく。
+echo 'export {}'  > src/literal.tsでファイルを作成して行っていく。
+
 
