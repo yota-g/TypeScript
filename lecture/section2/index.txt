@@ -104,3 +104,9 @@ oxford dictionaryで意味を調べている。
 alias : used to indicate that a named person is also known or more familiar under another specified name. 
 本名と芸名みたいな関係。　a.k.a also known asということ。
 echo 'export {};' > src/aliases.ts
+
+
+ 23.interface
+ tsではobjectに対してtype aliasesを使用してアノテーションを行うことができたが、
+objectへのアノテーションのもう一つのやり方の紹介。interfaces
+echo 'export {};' > src/interfaces.ts
