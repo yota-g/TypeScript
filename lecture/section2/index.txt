@@ -90,5 +90,17 @@ null,undefinedをピンポイントで持つ場合に指定するもの。
 プリミティブ型の中で文法上存在すると認識するのがゴールになる。
 echo 'export {};' > src/null-and-undefined.tsでファイルを作成して、定義していく。
 
+20.never型
+ファイルを作成して作業をしていく。
+echo 'export {};'  > src/void.tsで作成
 
+21.object型
+booleanやnumberみたいに簡単ではなく、複雑。{}を格納する時に使用するもの。
+echo 'export {};' > src/object.tsでファイルを作成。
 
+22.エイリアス型　type aliases型
+別名を持たせる。
+oxford dictionaryで意味を調べている。
+alias : used to indicate that a named person is also known or more familiar under another specified name. 
+本名と芸名みたいな関係。　a.k.a also known asということ。
+echo 'export {};' > src/aliases.ts

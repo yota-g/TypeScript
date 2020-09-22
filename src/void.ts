@@ -1,5 +1,6 @@
 export {};
 
+
 // まずは関数を書く。
 // function returnNothing(): undefined {
 //   console.log("I don't return anything");　
@@ -18,7 +19,7 @@ export {};
 //エラーが出る。というのは、ある関数があってその関数が返すデータの型がvoidやanyでもないとき何かしらのデータをreturnで返さないといけないということ。
 //:undefinedはundefinedなデータを返すと言っている。がundefinedという型はvoidでもanyでもないので、明示的にundefinedをreturnするコードを書かないといけなくなる。
 //関数の中にreturn;を書くか、return undefined;のいずれかを書くことで先ほど出ていたエラーが表示されなくなる。
-// これで解決ではなくて、return文を書いて、return値を受け取って何かをするというような堅実な処理ではなく、
+// これで解決ではなくて、return文を書いて、return値を受け取って何かをするというような堅実な処理ではなく、
 //returnNothingがreturnで何かを返すようなものではない。 returnをいちいち書き直すようなことをしたくない。
 //さらっと関数の中の処理をしてそれが済んだら終わりにするのが本来の目的。returnを書くのは本来の目的から離れている。
 //どうするのか。
@@ -32,4 +33,3 @@ function returnNothing(): void {
 };
 
 console.log(returnNothing());
-
