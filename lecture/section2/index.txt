@@ -145,4 +145,5 @@ union型はどうやったら使用できるのか。
 string,number,booleanのliteral型があるので学んでいく。
 echo 'export {}'  > src/literal.tsでファイルを作成して行っていく。
 
+29.列挙型(enum型)
 
