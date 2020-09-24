@@ -22,3 +22,13 @@ echo 'export {}'  > src/optional-arguments.tsで作成していく。
 関数の引数に値を指定しなかった場合に関数側に初期値を設定させること。
 echo 'export {}'  > src/default-parameters.tsでファイルを作成して実施する。
 
+35.Restパラメーターを設定しよう
+echo 'export {}'  > src/rest-paramerters.ts
+でコードを交えて紹介していく。
+デフォルトパラメータと同様、jsの機能である
+
+36.オーバーロードをやってみよう。
+tsに限ったものでなく一般的なプログラミングであるもの。
+オーバーロードは、関数を定義するときに同じ名前でありながら、引数や戻り値が違うものを定義する事。
+echo 'export {}'  > src/overloads.tsで実施
+
