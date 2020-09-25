@@ -52,9 +52,9 @@ function double (value: string): string;
 function double (value: any): any {
   if (typeof value === 'number'){
     return value * 2;
-  }else (typeof value === 'string'){ 
+  }else { 
     return value + value;
-  } 
+  }
 }
 //例外に関する分岐は必要なくなった。
 
