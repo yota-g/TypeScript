@@ -53,5 +53,36 @@ echo 'export {}'  > src/namespaces.tsでやっていく。
 拡張の仕方を学ぶ。
 echo 'export {}'  > src/inheritance.tsというファイルで実施していく。
 
+45.抽象クラスと抽象メソッド
+object思考機能の前提知識
+抽象メソッドは必ずオーバーライドするもの
+処理の実態がないから。
+このクラスにはこのような処理のメソッドがあるよという宣言のみ。
+抽象メソッドの宣言のことをシグネチャーという。
+echo 'export {}'  > src/abstract-classes.ts　でファイルを作成して、作業を実施していく。
+
+46,インターフェース・リターンズ
+23.interfaceの続き。tsのinterfaceには他の機能がある。
+これから紹介する機能の方がポピュラーなもの。
+classの概念を利用して、interfaceを使用する。
+echo 'export {}'  > src/return-of-interfaces.tsでファイルを作成で実施。　
+
+returnを使用する事でfunction外にその値を出力する事が可能になる。
+returnがないと外から参照する事ができない。
+参照する必要がないならvoidなどでundefindを表示させないようにできる。
+
+例。
+function mensekii(r) {
+  let i = 3.14 * r * r
+  console.log(i);
+  return i;
+}
+
+let mm = menseki(7)
+cosole.log(mm);
+この場合関数の中のconsole.log(l)は独自で出力する。だが、外部からの呼び出しでは表示されない。
+でもreturnの後につけたiは外部の変数mmを利用し他のものに代入したり、consolo.log()を外部で使用して表示する事ができる。
+returnがないと関数の外部では参照できないのが判明。
+
 
 
