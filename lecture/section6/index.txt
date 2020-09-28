@@ -19,5 +19,23 @@ tsは型を動的にプログラムできるもの。Conditional Typesを理解�
 ファイルを作って確認していく
 Utility Types
 echo 'export {}'  > src/partial-and-required.tsで実施していく
+　
+55.Mapped Types
+PartialとRequireedというユーティリティを学ぶ以外にもっと学んでおくべき事。
+echo 'export {};'  > src/mapped.ts
 
+56.Readonly 
+全てのプロパティがreadonlyになるというもの
+ファイルを作ってやっていく
+echo 'export {};'  > src/utility-types-readonly.tsで実施する。
 
+57.Record型
+ファイルを作ってやっていく
+echo 'export {};'  > src/record.ts
+
+58.ExcludeとExractとNonNullableについて
+echo 'export {};'  > src/exclude-extract-nonnullable.tsで実施していく。
+
+59.Conditional TypesとDistributive Conditional Typesについてマスターしよう
+Excludeの型の定義を確認していく。
+すでに実装されたコードを利用していく。
