@@ -39,3 +39,8 @@ echo 'export {};'  > src/exclude-extract-nonnullable.tsで実施していく。
 59.Conditional TypesとDistributive Conditional Typesについてマスターしよう
 Excludeの型の定義を確認していく。
 すでに実装されたコードを利用していく。
+src/exclude-extract-nonnullable.ts src/exclude-extract-nonnullable-definition.ts
+
+60. PickとOmit
+ファイルを作成してやっていく
+

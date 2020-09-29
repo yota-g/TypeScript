@@ -1,6 +1,6 @@
 export {};
 
-type Profile {
+type Profile ={
   name: string;
   age: number;
 };
