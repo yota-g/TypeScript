@@ -44,3 +44,19 @@ src/exclude-extract-nonnullable.ts src/exclude-extract-nonnullable-definition.ts
 60. PickとOmit
 ファイルを作成してやっていく
 
+61.ReturnType
+echo 'export {};'  > src/return-type.ts で実行していく
+
+62.Conditional Types で使用されるinferキーワードについて学習する。
+型推論について深く見ていく。
+ReturnTypeの定義を見ながら型推論を見ていく。
+
+63.Parameters というUtilitiy型
+ある関数があった場合のその関数が受け取る引数と同じ構造の型を取り扱いたい時に重宝するUtility
+ファイルを作成する。　
+echo 'export {};'  > src/parameter.ts
+
+64.ConstructorParameters.
+クラスの方に目を向けてクラスのインスタンスを 作る際の引数の型を抽出する事ができるUtility型を見ていく。
+echo 'export {};'  > src/constructor-parameters.tsで実施する。
+
