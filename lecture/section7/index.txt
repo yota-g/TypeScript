@@ -1,0 +1,21 @@
+65.Reactの紹介、なぜReactを学ぶのか。
+実践的なWEB アプリケーションをtsで書いていく。
+フロントエンド開発で多くのエンジニアに採用されているReactを採用。
+jsでReactを書いてきた人もtsだとどう書くのかを学ぶ。
+なぜReactを扱うのか。
+紹介したいサイト
+npmtrends.com　どれだけReactが使われているのかを紹介できるサイト
+@angular/core vs angular vs react vs vue
+フロントエンド開発で用いられる３大ライブラリ
+angular react vueのダウンロードの比較をしている。
+ダントツでreactがダウンロードされている。圧倒的
+reactをダウンロードすればその数に応じて仕事を取れる。
+
+しっといて損はない。
+
+66.GitHubでリポジトリを作成使用
+アプリケーションの土台を作成する。
+react-starter-kit-in-typescript-with-node-v12.14.1をダウンロードしていく
+今回のnodeのバージョンは12.14.1を使用する。
+tsでreactアプリケーションを作ってgit commitをするのがゴール
+本プロジェクトは、create-react-app により作成したアプリケーションから React の学習に最低限必要な機能のみを厳選し、軽量化したものです。 以下の手順でアプリケーションを起動できます。
